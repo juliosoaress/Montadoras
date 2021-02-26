@@ -17,22 +17,18 @@ import android.widget.ListView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Lista de Montadoras";
     public static final String CHAVE_MONTADORA = "montadora";
     private final MontadoraDAO dao = new MontadoraDAO();
     private ArrayAdapter<Montadora> adapter;
-    private Button botaoNovaMontadora;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        botaoNovaMontadora = findViewById(R.id.button);
         setTitle(TITULO_APPBAR);
         configuraFabNovaMontadora();
         configuraLista();
